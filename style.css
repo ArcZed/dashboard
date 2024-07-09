@@ -80,7 +80,14 @@ body{
 .header-top {
     grid-row: 1 / 2;
     display: grid;
-    grid-template-columns: auto 0.9fr auto auto auto auto;
+    grid-template-columns: auto auto;
+    gap: 1vh;
+    align-items: center;
+}
+
+.left-head{
+    display: grid;
+    grid-template-columns: auto 1fr;
     gap: 1vh;
     align-items: center;
 }
@@ -91,6 +98,23 @@ body{
     border-radius: 50px;
     height: 5vh;
     width: auto;
+    overflow-x: hidden;
+    padding-left: 2vh;
+}
+
+
+.right-head{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.avatar{
+    height: 5vh;
+    width: 5vh;
+    background-color: red;
 }
 
 .user-header {
@@ -110,12 +134,25 @@ body{
 .user-options {
     display: flex;
     flex-flow: row;
-    gap: 2vh;
+    gap: 3vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    color: white;
+    background-color: #4392F1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12vh;
+    height: 5vh;
+    border-radius: 20px;
 }
 
 /* Content styling */
 .content {
-    padding: 0;
+    padding: 1vh;
     display: grid;
     gap: 2vh;
     grid-template-columns: 4fr 1fr;
@@ -147,20 +184,42 @@ body{
 .task-card {
     background-color: white;
     width: 50vh;
-    height: 23vh;
+    height: 18vh;
     border-left: 1vh solid #FBAF00;
     border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    align-items: center;
+    padding: 3vh;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.card-content{
+    font-size: 20px;
+}
+
+.icon-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2vh;
 }
 
 .notification{
-    margin: 1vh;
+    padding: 2vh;
+    padding-left: 0;
+    gap: 1vh;
     display: flex;
     flex-flow: column;
     background-color: #F7F7F2;
 }
 
 .inside-noti{
-    background-color: #00A878;
+    background-color: white;
     width: 30vh;
     height: 35vh;
 }
@@ -170,7 +229,7 @@ body{
 }
 
 .inside-trending{
-    background-color: #FE5E41;
+    background-color: white;
     width: 30vh;
     height: 35vh;
 }
